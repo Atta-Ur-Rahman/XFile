@@ -58,7 +58,7 @@ public class DialogUtils {
 
         String strPath = "/storage/emulated/0/XFiles/" + string;
 
-        Utilities.putValueInEditor(context).putString("record_path",strPath).commit();
+
 
         try {
             mediaPlayer.setDataSource(strPath);

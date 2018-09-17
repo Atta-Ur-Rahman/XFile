@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 import java.io.File;
@@ -69,12 +70,15 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
             }
         });
 
-        holder.linearLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+      holder.ivText.setOnClickListener(new View.OnClickListener() {
+          @Override
+          public void onClick(View v) {
 
-            }
-        });
+              strPath = "/storage/emulated/0/XFiles/" + fileHelper.getStrRecordingFilePath();
+              Utilities.putValueInEditor(context).putString("record_path",strPath).commit();
+              Utilities.connectFragment(context,new TranscriberFragment());
+          }
+      });
 
         holder.ivDelete.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -115,7 +119,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
         TextView tvRecordingFiles, tvRecordingDuration, tvRecordingDateTime;
         LinearLayout linearLayout;
-        ImageView ivDelete;
+        ImageView ivDelete,ivText;
 
         public ViewHolder(View itemView) {
             super(itemView);
@@ -126,6 +130,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
             tvRecordingDuration = itemView.findViewById(R.id.tv_recording_duration);
             tvRecordingDateTime = itemView.findViewById(R.id.tv_recording_date_time);
             ivDelete = itemView.findViewById(R.id.iv_delete);
+            ivText = itemView.findViewById(R.id.iv_text);
 
         }
 
