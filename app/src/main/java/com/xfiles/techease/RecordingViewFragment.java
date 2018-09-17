@@ -45,6 +45,8 @@ public class RecordingViewFragment extends Fragment {
 
         parentView = inflater.inflate(R.layout.fragment_recording_view, container, false);
 
+
+
         rvRecordingFile = parentView.findViewById(R.id.rv_recording_file);
         tvRecordingFileNotFound = parentView.findViewById(R.id.tv_recording_file_not_found);
 
@@ -185,3 +187,4 @@ public class RecordingViewFragment extends Fragment {
         return format.format(length) + " B";
     }
 }
+
