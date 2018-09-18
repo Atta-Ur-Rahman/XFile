@@ -13,86 +13,96 @@
         android:layout_gravity="center"
         card_view:cardCornerRadius="4dp">
 
-
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
-            android:orientation="horizontal">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="3"
+                android:background="@color/colorPrimary"
                 android:orientation="horizontal">
-
-                <ImageView
-                    android:id="@+id/iv_text"
-                    android:layout_width="40sp"
-                    android:layout_height="45sp"
-                    android:layout_gravity="center_vertical"
-                    android:src="@drawable/text" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="3"
-                    android:orientation="vertical">
+                    android:orientation="horizontal">
 
-                    <LinearLayout
-
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal">
-
-                        <TextView
-                            android:id="@+id/tv_recording_file"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="3"
-                            android:paddingLeft="10sp"
-                            android:text="@string/app_name"
-                            android:textColor="@color/white"
-                            android:textSize="15dp" />
-
-                    </LinearLayout>
+                    <ImageView
+                        android:id="@+id/iv_text"
+                        android:layout_width="40sp"
+                        android:layout_height="45sp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/text" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:layout_weight="3"
+                        android:orientation="vertical">
 
-                        <TextView
-                            android:id="@+id/tv_recording_date_time"
-                            android:layout_width="wrap_content"
-                            android:layout_height="30sp"
-                            android:gravity="center_vertical"
-                            android:paddingLeft="10sp"
-                            android:layout_weight="4"
-                            android:text="@string/app_name"
-                            android:textColor="@color/white"
-                            android:textSize="13dp" />
+                        <LinearLayout
 
-                        <TextView
-                            android:id="@+id/tv_recording_duration"
-                            android:layout_width="wrap_content"
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/app_name"
-                            android:layout_weight="1"
-                            android:textColor="@color/white"
-                            android:textSize="15dp" />
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_recording_file"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="3"
+                                android:paddingLeft="10sp"
+                                android:text="@string/app_name"
+                                android:textColor="@color/white"
+                                android:textSize="15dp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_recording_date_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="30sp"
+                                android:layout_weight="4"
+                                android:gravity="center_vertical"
+                                android:paddingLeft="10sp"
+                                android:text="@string/app_name"
+                                android:textColor="@color/white"
+                                android:textSize="13dp" />
+
+                            <TextView
+                                android:id="@+id/tv_recording_duration"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="@string/app_name"
+                                android:textColor="@color/white"
+                                android:textSize="15dp" />
+                        </LinearLayout>
                     </LinearLayout>
+
                 </LinearLayout>
 
+                <ImageView
+                    android:id="@+id/iv_delete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/delete" />
             </LinearLayout>
 
-            <ImageView
-                android:id="@+id/iv_delete"
+            <Button
+                android:id="@+id/btn_convert"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:src="@drawable/delete" />
+                android:layout_height="wrap_content"
+                android:text="convert" />
         </LinearLayout>
-
     </android.support.v7.widget.CardView>
 
 </LinearLayout>
